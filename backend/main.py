@@ -307,6 +307,13 @@ def process(job_id: str) -> None:
                 logger.warning("Could not clean older source caches after re-export.")
 
 
+@app.get("/")
+async def root():
+    return {
+        "message": "Open Voice API is running",
+        "docs": "/docs"
+    }
+    
 @app.get("/api/health")
 def health():
     return {"status": "ok", "engine": pipeline.engine_info(), "preview_seconds": PREVIEW_SECONDS,
