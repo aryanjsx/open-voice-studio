@@ -9,3 +9,25 @@ backend/*.wav
 backend/*.mp3
 backend/*.mp4
 *.pyc
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Model and application cache
+**/cache/
+**/__pycache__/
+
+# Local storage
+backend/storage/
