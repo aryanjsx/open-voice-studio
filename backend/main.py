@@ -97,7 +97,8 @@ async def lifespan(_app: FastAPI):
 
 app = FastAPI(title="Voice Studio API", lifespan=lifespan)
 app.add_middleware(CORSMiddleware,
-                   allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+                #    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+                   allow_origins=["https://vchange.vercel.app"],
                    allow_methods=["*"], allow_headers=["*"],
                    expose_headers=["Content-Disposition"])
 
@@ -313,7 +314,7 @@ async def root():
         "message": "Open Voice API is running",
         "docs": "/docs"
     }
-    
+
 @app.get("/api/health")
 def health():
     return {"status": "ok", "engine": pipeline.engine_info(), "preview_seconds": PREVIEW_SECONDS,
