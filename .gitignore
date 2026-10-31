@@ -1,0 +1,11 @@
+# Local Python environment and generated model/media data
+backend/.venv/
+backend/__pycache__/
+backend/tests/__pycache__/
+backend/storage/
+backend/cache/
+backend/refs/
+backend/*.wav
+backend/*.mp3
+backend/*.mp4
+*.pyc

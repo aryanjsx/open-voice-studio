@@ -1,0 +1,44 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Audio Project: Backend",
+			"type": "shell",
+			"command": "${workspaceFolder}/backend/.venv/Scripts/python.exe",
+			"args": [
+				"-m",
+				"uvicorn",
+				"main:app",
+				"--app-dir",
+				"${workspaceFolder}/backend",
+				"--host",
+				"127.0.0.1",
+				"--port",
+				"8001",
+				"--reload",
+				"--reload-dir",
+				"${workspaceFolder}/backend"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Audio Project: Frontend",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"--prefix",
+				"${workspaceFolder}/frontend",
+				"run",
+				"dev",
+				"--",
+				"--hostname",
+				"127.0.0.1",
+				"--port",
+				"3000"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
