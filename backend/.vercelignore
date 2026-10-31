@@ -1,0 +1,13 @@
+tests/
+benchmark.py
+benchmark_efficiency.py
+vc_test.py
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.pyc
+*.log
+.venv/
+venv/
+.git/
